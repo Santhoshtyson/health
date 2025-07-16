@@ -24,6 +24,19 @@ export const FEATURE_ORDER = [
   'noclaimbonus',
   'hospitalcashbenefit',
   'waitingperiods',
+  'PremiumWaiver',
+  'FreezeyourAge',
+  'LimitlessLoyaltyBonus',
+  'SumInsuredMultiplier',
+  'HealthBooster',
+  'NursingatHome',
+  'ConsumablesCover',
+  'GracePeriodCover',
+  'StayFit',
+  'InclinicConsultation',
+  'FutureShield',
+  'Limitlesscare'
+
 ];
 
 export const FEATURE_LABELS: { [key: string]: string } = {
@@ -51,4 +64,16 @@ export const FEATURE_LABELS: { [key: string]: string } = {
   noclaimbonus: 'No Claim Bonus',
   hospitalcashbenefit: 'Hospital Cash Benefit(Gold Plan)',
   waitingperiods: 'Waiting Periods',
+  PremiumWaiver: 'Premium Waiver',
+  FreezeyourAge: 'Freeze your Age',
+  LimitlessLoyaltyBonus: 'Limitless Loyalty Bonus',
+  SumInsuredMultiplier: 'Sum Insured Multiplier',
+  HealthBooster: 'Health Booster',
+  NursingatHome: 'Nursing at Home',
+  ConsumablesCover: 'Consumables Cover',
+  GracePeriodCover: 'Grace Period Cover',
+  StayFit: 'Stay Fit',
+  InclinicConsultation: 'In-clinic Consultation',
+  FutureShield: 'Future Shield',
+  Limitlesscare: 'Limitless Care'
 };

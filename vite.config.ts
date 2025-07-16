@@ -5,7 +5,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
 
   return {
-    base: '/health/', // ✅ This is required for correct asset paths on Netlify
+    base: '/', // ✅ This is required for correct asset paths on Netlify
     plugins: [react()],
     server: {
       host: '0.0.0.0',

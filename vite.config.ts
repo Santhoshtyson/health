@@ -1,22 +1,23 @@
-import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
+import path from 'path';
 
 export default defineConfig(({ mode }) => {
-    const env = loadEnv(mode, '.', '');
-    return {
-      base: '/health/', 
-      server: {
-        host: '0.0.0.0',
-        port: 5173
+  const env = loadEnv(mode, '.', '');
+
+  return {
+    base: '/health/',
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, './src'),
       },
-      define: {
-        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
-      },
-      resolve: {
-        alias: {
-          '@': path.resolve(__dirname, '.'),
-        }
-      }
-    };
+    },
+    server: {
+      host: '0.0.0.0',
+      port: 5173,
+    },
+    define: {
+      'process.env': env,
+    },
+    // other config...
+  };
 });

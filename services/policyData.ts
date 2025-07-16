@@ -662,10 +662,11 @@ export const policies: Policy[] = [
       chronicDisease: { text: 'Coverage for ABCDH diseases from 31st Day with Quick shield Add-on' },
       maternity: { text: 'Available as Add-on 50k/1L coverage with 2yrs waiting perion' },     newbornCover: { text: 'Yes with rider' },
       wellness: { text: 'The Insured can earn reward points and avail premium discount up to 20% on the renewal premium by enrolling and achieving the wellness goals. Health check up from day 1 for each policy year' },
-      opdCover: { text: 'Unlimited tele-consultations and dental' },
-      waitingPeriods: { text: 'Standard waiting periods apply' },
-      exclusions: { text: 'Standard exclusions apply' },
+      opdCover: { text: 'Unlimited tele-consultations and AI face face scan through Star Health Application' },
+      waitingPeriods: { text: 'Initial: 30 days. Specific: 24 months. PED: 36 months. Maternity: 24 months.' },
+      exclusions: { text: 'Cosmetic surgery, self-inflicted injuries, adventure sports etc' },
       usps: { text: 'Affordable top-up plan with high sum insured and flexible deductibles.' },
+      hometcaretreatment: {text: 'Yes available'}
     },
   },
 ];

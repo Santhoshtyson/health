@@ -18,6 +18,12 @@ export const FEATURE_ORDER = [
   'waitingPeriods',
   'exclusions',
   'usps',
+  'hometcaretreatment',
+  'annualhealthcheckup',
+  'cashbenefits',
+  'noclaimbonus',
+  'hospitalcashbenefit',
+  'waitingperiods',
 ];
 
 export const FEATURE_LABELS: { [key: string]: string } = {
@@ -39,4 +45,10 @@ export const FEATURE_LABELS: { [key: string]: string } = {
   waitingPeriods: 'Waiting Periods',
   exclusions: 'Brief Exclusions',
   usps: 'Unique Selling Propositions (USPs)',
+  hometcaretreatment: 'Home Care Treatment',
+  annualhealthcheckup: 'Annual Health Check-up',
+  cashbenefits: 'Cash Benefits',
+  noclaimbonus: 'No Claim Bonus',
+  hospitalcashbenefit: 'Hospital Cash Benefit(Gold Plan)',
+  waitingperiods: 'Waiting Periods',
 };

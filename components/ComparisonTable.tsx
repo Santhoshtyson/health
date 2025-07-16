@@ -32,28 +32,46 @@ export const ComparisonTable: React.FC<ComparisonTableProps> = ({ policies, feat
           </tr>
         </thead>
         <tbody className="bg-white">
-          {featureOrder.map((featureKey) => (
-            <tr key={featureKey} className="border-t border-gray-200">
-              <td className="sticky left-0 bg-gray-100 p-3 text-sm font-medium text-gray-800 z-10 w-48 border-r border-gray-300">
-                {FEATURE_LABELS[featureKey] || featureKey}
-              </td>
-              {policies.map((policy) => {
-                const featureDetail = policy.features[featureKey];
-                return (
-                  <td key={`${policy.id}-${featureKey}`} className="p-3 text-sm text-gray-700 whitespace-pre-wrap w-64 border-r border-gray-200 align-top">
-                    {featureDetail ? (
-                      <>
-                        <span>{featureDetail.text}</span>
-                        {featureDetail.meta && <span className="block text-xs text-gray-500 italic mt-1">{featureDetail.meta}</span>}
-                      </>
-                    ) : (
-                      <span>-</span>
-                    )}
-                  </td>
-                );
-              })}
-            </tr>
-          ))}
+          {featureOrder.map((featureKey) => {
+            // Skip row if all policy values are empty or missing
+            const isAllEmpty = policies.every((policy) => {
+              const value = policy.features[featureKey]?.text;
+              return !value || value.trim() === '';
+            });
+
+            if (isAllEmpty) {
+              return null;
+            }
+
+            return (
+              <tr key={featureKey} className="border-t border-gray-200">
+                <td className="sticky left-0 bg-gray-100 p-3 text-sm font-medium text-gray-800 z-10 w-48 border-r border-gray-300">
+                  {FEATURE_LABELS[featureKey] || featureKey}
+                </td>
+                {policies.map((policy) => {
+                  const featureDetail = policy.features[featureKey];
+                  const text = featureDetail?.text?.trim();
+                  return (
+                    <td
+                      key={`${policy.id}-${featureKey}`}
+                      className="p-3 text-sm text-gray-700 whitespace-pre-wrap w-64 border-r border-gray-200 align-top"
+                    >
+                      {text ? (
+                        <>
+                          <span>{featureDetail.text}</span>
+                          {featureDetail.meta && (
+                            <span className="block text-xs text-gray-500 italic mt-1">{featureDetail.meta}</span>
+                          )}
+                        </>
+                      ) : (
+                        <span>-</span>
+                      )}
+                    </td>
+                  );
+                })}
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>

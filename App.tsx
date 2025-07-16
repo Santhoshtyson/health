@@ -5,7 +5,6 @@ import { ComparisonTable } from './components/ComparisonTable';
 import { PolicyGrid } from './components/PolicyGrid';
 import { CompetitorSelector } from './components/CompetitorSelector';
 import { policies, insurers } from './services/policyData';
-import type { Policy } from './types';
 import { FEATURE_ORDER } from './constants';
 
 const App: React.FC = () => {

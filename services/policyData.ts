@@ -117,7 +117,7 @@ export const policies: Policy[] = [
       restoreBenefit: { text: 'Automatic Restoration Up to 100% of the Basic SI Available immediately upon partial/full utilization of the limit of coverage once in a policy year' },
       cumulativeBonus: { text: '20% of the expiring Sum Insured from the second year onwards Up to 100% of the Basic SI' },
       chronicDisease: { text: 'Lump Sum Cancer Benefit for women: If the insured person shall contract cancer as a first incidence, lumpsum is payable' },
-      maternity: { text: 'Ante-Natal Care (after 24m wait). Delivery Expenses: Covered up to limits (e.g., ₹1L for Caesarean for 1Cr SI) after a 12-month wait (if SI ≥ ₹10L).' },
+      maternity: { text: '5L- up to 25,000, 10/15/20L- up to 50,000, 25/50L- up to 75,000, 1CR- up to 1L' },
       newbornCover: { text: 'Covered from Day 1, including congenital defects, up to 25% of SI (max ₹10L). Includes vaccinations.' },
       wellness: { text: 'The Insured can earn reward points and avail premium discount up to 10% on the renewal premium by enrolling and achieving the wellness goals. Health check up once in a year' },
       opdCover: { text: 'Covered only for women based on SI amount' },
